@@ -1,0 +1,151 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    font-family: 'Lora', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f1eb; /* Soft Ivory */
+    color: #3e3a34; /* Dark, earthy text color */
+    background-image: 
+        linear-gradient(rgba(244, 241, 235, 0.8), rgba(244, 241, 235, 0.8)),
+        url('https://www.transparenttextures.com/patterns/asanoha.png'); /* Subtle traditional pattern */
+}
+
+/* Feedback Container */
+.feedback-container {
+    background-color: #ffffff; /* White card background */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    padding: 25px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e0dcd3;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin: 20px;
+}
+
+/* Toolbar Styles */
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 15px;
+    color: #a89d8e; /* Dusk Blue / Sandalwood muted tone */
+}
+
+.icon-placeholder {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.icon-placeholder:hover {
+    color: #e49c5d; /* Sandalwood accent on hover */
+}
+
+/* Header Styles */
+.main-header h1 {
+    font-size: 2.2rem; /* LargeTitle style */
+    margin: 0;
+    font-weight: 500;
+    color: #5a524a;
+}
+
+.main-header .hindi-title {
+    font-family: 'Noto Sans Devanagari', sans-serif;
+    font-size: 2rem;
+    margin-top: 5px;
+    color: #5a524a;
+}
+
+/* Intro Text Styles */
+.intro-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 20px 0;
+    color: #6c665f;
+}
+
+.hindi-text {
+    font-family: 'Noto Sans Devanagari', sans-serif;
+}
+
+/* Survey Options */
+.survey-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.survey-card {
+    background-color: #fdfaf5; /* Lighter ivory for cards */
+    border: 1px solid #e0dcd3;
+    border-radius: 15px;
+    padding: 20px;
+    text-decoration: none;
+    color: #3e3a34;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.survey-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(228, 156, 93, 0.15);
+    border-color: #e49c5d;
+}
+
+.survey-card .emoji {
+    font-size: 1.8rem;
+}
+
+.survey-card .button-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #f0ebe4;
+    color: #a89d8e;
+    display: flex;
+    justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .feedback-container {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .main-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .main-header .hindi-title {
+        font-size: 1.7rem;
+    }
+
+    .intro-text {
+        font-size: 1rem;
+    }
+
+    .survey-card .button-text {
+        font-size: 1.1rem;
+    }
+}
