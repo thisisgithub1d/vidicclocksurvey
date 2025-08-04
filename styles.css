@@ -13,6 +13,39 @@ body {
         url('https://www.transparenttextures.com/patterns/asanoha.png'); /* Subtle traditional pattern */
 }
 
+/* Main Layout Container */
+.main-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Side Images */
+.left-image, .right-image {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.side-image {
+    width: 400px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.side-image:hover {
+    transform: scale(1.02);
+}
+
 /* Feedback Container */
 .feedback-container {
     background-color: #ffffff; /* White card background */
@@ -127,6 +160,26 @@ footer {
 }
 
 /* Responsive Design */
+@media (max-width: 768px) {
+    .main-layout {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .left-image, .right-image {
+        order: 2;
+    }
+    
+    .feedback-container {
+        order: 1;
+    }
+    
+    .side-image {
+        max-width: 150px;
+        max-height: 200px;
+    }
+}
+
 @media (max-width: 480px) {
     .feedback-container {
         margin: 10px;
@@ -147,5 +200,15 @@ footer {
 
     .survey-card .button-text {
         font-size: 1.1rem;
+    }
+    
+    .side-image {
+        max-width: 120px;
+        max-height: 160px;
+    }
+    
+    .main-layout {
+        gap: 15px;
+        padding: 10px;
     }
 }
